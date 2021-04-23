@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="report">
+
+<!--crud 4가지  -->
+	<select id="selectcount" parameterType="messageVO" resultType = "int">
+		select count(*) from MESSAGE where IDSEND = #{IDSEND} and IDRE = #{IDRE}
+	</select>
+	<select id="selectRcount" resultType = "int">
+		select count(*) from REPORT 
+	</select>
+	<insert id="insert" parameterType="reportVO">
+		insert into REPORT values(rid_seq.nextval,sysdate,#{rreason},#{rtarget},#{rwriter})
+	</insert>
+	<select id="select" resultType = "reportVO">
+		select * from (select rownum rnum, REPORT.* from (select * from REPORT order by rid desc) REPORT) where rnum between #{list[0]} and #{list[1]}
+	</select>
+	
+
+</mapper>

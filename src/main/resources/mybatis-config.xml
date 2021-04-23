@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+   <typeAliases>
+      <typeAlias type="com.spring.project2.BbsVO" alias="bbsVO"></typeAlias>
+      <typeAlias type="com.spring.project2.MemberVO" alias="memberVO"></typeAlias>
+      <typeAlias type="com.spring.project2.ReportVO" alias="reportVO"></typeAlias>
+      <typeAlias type="com.spring.project2.MessageVO" alias="messageVO"></typeAlias>
+      <typeAlias type="com.spring.project2.ChartVO" alias="chartVO"></typeAlias>
+      <typeAlias type="com.spring.project2.Member2VO" alias="member2VO"></typeAlias>
+      <typeAlias type="com.spring.project2.TypeVO" alias="typeVO"></typeAlias>
+      <typeAlias type="com.spring.project2.MatchVO" alias="matchVO"></typeAlias>
+   </typeAliases>
+   <mappers>
+
+      <mapper resource="mapper/bbsMapper.xml" />
+      <mapper resource="mapper/memberMapper.xml" />
+      <mapper resource="mapper/reportMapper.xml" />
+      <mapper resource="mapper/messageMapper.xml" />
+      <mapper resource="mapper/chartMapper.xml" />
+      <mapper resource="mapper/member2Mapper.xml" />
+      <mapper resource="mapper/typeMapper.xml" />
+      <mapper resource="mapper/matchMapper.xml" />
+   </mappers>
+</configuration>
